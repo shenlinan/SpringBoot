@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>首页</title>
+<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap-pager.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap-select.min.css">
+<style type="text/css">
+.padding20-20-10
+{
+	padding: 20px 20px 10px;
+}
+</style>
+</head>
+<body>
+	<div class="text-center ">
+		<ul class="nav nav-tabs">
+		  <li role="presentation" id="expenditureList" ><a href="javascript:void(0)" >支出</a></li>
+		  <li role="presentation" id="inComeList"><a href="javascript:void(0)">收入</a></li>
+		  <li role="presentation" id="expenditureRecord" ><a href="javascript:void(0)" >支出录入</a></li>
+		  <li role="presentation" id="inComeRecord"><a href="javascript:void(0)">收入录入</a></li>
+		</ul>
+	</div>
+	
+	<div id="detail" class="panel panel-default padding20-20-10" >
+	  <!-- Default panel contents -->
+	  <div id="inComeFilter">
+	  
+	  	<div class="row">
+		  <div class="col-lg-2 pull-right">
+		    <div class="input-group">
+		      <input type="text" class="form-control" placeholder="用途" id="useage-search">
+		      <span class="input-group-btn" id="inComeSearch">
+		        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+		      </span>
+		    </div>
+		  </div>
+		  <div id="selectDiv-search" class="col-lg-2 pull-right" ></div>
+		</div>
+		
+	  </div><br>
+	   <div class="panel-heading"></div>  
+	  <!-- Table -->
+	  <table class="table  table-bordered table-striped">
+	  	<thead>
+	       <tr>
+	         <th>姓名</th>
+	         <th>支出金额（元）</th>
+	         <th>用途</th>
+	         <th>支出时间</th>
+	       </tr>
+	     </thead>
+	  </table>
+	  
+	  <div id="page-container-static-normal" class="pull-right" ></div>
+	</div>
+ 
+	<div id="indexDiv" class="hide">
+		<div id="inComeDiv" class="input-group input-group-sm">
+			<span class="glyphicon glyphicon-user"></span>
+			 <span class="input-group-addon" id="basic-addon1">收入金额</span>
+			 <input type="text" class="form-control" placeholder="请输入收入金额..." aria-describedby="basic-addon1">
+		</div>
+		<button type="button" onclick="submitInCome()" class="btn btn-default">提交</button>
+		
+	</div>
+	<div id="expenditureRecordDiv" class="padding20-20-10">
+		<div id="selectDiv" class="hide" >
+		</div><br>
+		<div id="expenditureDiv" class="hide">
+	        <div class="input-group col-lg-2">
+	            <span class="input-group-addon">支出金额</span>
+	            <input id="expenditure" type="text" class="form-control" placeholder="输入金额...">
+	        </div><br>
+	        <div class="input-group col-lg-5">
+	            <span class="input-group-addon">用&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;途</span>
+	            <input id="useage" type="text" class="form-control" placeholder="输入用途...">
+	        </div><br>
+	        <button class="btn btn-primary" type="button" onclick="submitExpenditure()">提交 </button>
+		</div>
+	</div>
+	
+</body>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="bootstrap/dist/js/bootstrap-pager.js"></script>
+<script type="text/javascript" src="bootstrap/dist/js/bootstrap-select.min.js"></script>
+<script type="text/javascript" src="js/ewin.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+
+</script>
+</html>
+
